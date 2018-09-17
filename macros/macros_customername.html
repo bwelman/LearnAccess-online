@@ -1,0 +1,313 @@
+
+<!DOCTYPE html
+  PUBLIC "" "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" xml:lang="en-us" lang="en-us">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta charset="UTF-8" /><meta name="copyright" content="(C) Copyright 2018" /><meta name="DC.rights.owner" content="(C) Copyright 2018" /><meta name="DC.Type" content="task" /><meta name="description" content="Searching a record with two combo boxes on a form." /><meta name="indexterms" content="Form, combo box, macro, search record" /><meta name="DC.subject" content="Form, combo box, macro, search record" /><meta name="keywords" content="Form, combo box, macro, search record" /><meta name="DC.Relation" scheme="URI" content="../macros/macros.html" /><meta name="DC.Relation" scheme="URI" content="../macros/macros_customercode.html" /><meta name="prodname" content="Access 2016" /><meta name="DC.Creator" content="Ben Welman" /><meta name="DC.Date.Created" content="2017-10-05" /><meta name="DC.Date.Modified" content="2017-10-05" /><meta name="DC.Format" content="XHTML" /><meta name="DC.Identifier" content="macros_customername" /><meta name="DC.Language" content="en-US" />        
+      <title>Task: Customer search by name</title><!--  Generated with Oxygen version 20.1-SNAPSHOT, build number 2018080803.  --><meta name="wh-path2root" content="../" /><meta name="wh-toc-id" content="macros_customername-d66e6884" /><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/lib/bootstrap/css/bootstrap.min.css" /><link rel="stylesheet" href="../oxygen-webhelp/lib/bootstrap/css/bootstrap-theme.min.css" /><link rel="stylesheet" href="../oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css" /><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/app/topic-page.css?buildId=2018080803" /><script type="text/javascript" src="../oxygen-webhelp/lib/jquery/jquery-3.1.1.min.js"><!----></script><script data-main="../oxygen-webhelp/app/topic-page.js" src="../oxygen-webhelp/lib/requirejs/require.js"></script><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/template/light.css?buildId=2018080803" /></head>
+
+    <body id="macros_customername" class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">Jump to main content</a>
+        <!-- EXM-36950 - Expand the args.hdr parameter here -->
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <!--
+                            This component will be generated when the next parameters are specified in the transformation scenario:
+                            'webhelp.logo.image' and 'webhelp.logo.image.target.url'.
+                            See: http://oxygenxml.com/doc/versions/17.1/ug-editor/#topics/dita_webhelp_output.html.
+                    -->
+                    <a href="https://softwijs.nl/" class=" wh_logo hidden-xs "><img src="../LogoSW.gif" alt="  Learn Access 2016  A task oriented textbook  " /></a>
+                    <div class=" wh_publication_title "><a href="../index.html"><span class="booktitle">  <span class="ph mainbooktitle">Learn Access 2016</span>  <span class="ph booktitlealt">A task oriented textbook</span>  </span></a></div>
+                    
+                </div>
+                
+                <!-- The menu button for mobile devices is copied in the output only when the 'webhelp.show.top.menu' parameter is set to 'yes' -->
+                <button type="button" data-target="#wh_top_menu_and_indexterms_link" id="wh_menu_mobile_button" data-toggle="collapse" class="navbar-toggle collapsed wh_toggle_button" aria-expanded="false" aria-label="Toggle menu">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                <nav class=" wh_top_menu "><ul>
+   <li><span data-tocid="preface-online-d66e341" data-state="leaf" class=" topicref " data-id="preface-online"><span class="title"><a href="../common/preface-online.html">Preface</a></span></span></li>
+   <li class="has-children"><span data-tocid="part_basic-d66e357" data-state="not-ready" class=" topicref " data-id="part_basic"><span class="title"><a href="../part_basic.html">Basic</a></span></span></li>
+   <li class="has-children"><span data-tocid="part_advanced-d66e5732" data-state="not-ready" class=" topicref " data-id="part_advanced"><span class="title"><a href="../part_advanced.html">Advanced</a></span></span></li>
+   <li><span data-tocid="colofon-d66e6923" data-state="leaf" class=" topicref " data-id="colofon"><span class="title"><a href="../common/colofon.html">Colophon</a></span></span></li>
+</ul></nav>
+                <div class=" wh_indexterms_link "><a href="../indexTerms.html" title="Index" aria-label="Go to index terms page"><span>Index</span></a></div>
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        <div class=" wh_search_input "><form id="searchForm" method="get" role="search" action="../search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" /><button type="submit" class="wh_search_button" aria-label="Search"><span>Search</span></button></div><script><!--
+                                    $(document).ready(function () {
+                                        $('#searchForm').submit(function (e) {
+                                            if ($('.wh_search_textfield').val().length < 1) {
+                                                e.preventDefault();
+                                            }
+                                        });
+                                    });
+                                --></script></form></div>
+        
+        <div class="container-fluid">
+            <div class="row">
+
+                <nav class="wh_tools hidden-print">
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol xmlns:html="http://www.w3.org/1999/xhtml" class="hidden-print"><li><span class="home"><a href="../index.html"><span>Home</span></a></span></li>
+   <li><span class="topicref" data-id="part_advanced"><span class="title"><a href="../part_advanced.html">Advanced</a></span></span></li>
+   <li><span class="topicref" data-id="macros"><span class="title"><a href="../macros/macros.html">Macros</a><span class="wh-tooltip">
+               
+               <p xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc"></p>
+               </span></span></span></li>
+   <li class="active"><span class="topicref" data-id="macros_customername"><span class="title"><a href="../macros/macros_customername.html">Task: Customer search by name</a><span class="wh-tooltip">
+               
+               <p xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc">Searching a record with two combo boxes on a form.</p>
+               </span></span></span></li>
+</ol></div>
+
+                    <div class="wh_right_tools hidden-sm hidden-xs">
+                        <div class=" wh_navigation_links "><span id="topic_navigation_links" class="navheader">
+  </span></div>
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        <div class=" wh_print_link print "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        <nav role="navigation" id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-3 hidden-xs navbar hidden-print">
+                            <div class=" wh_publication_toc " data-tooltip-position="right"><ul role="tree" aria-label="Table of Contents"><span class="expand-button-action-labels"><span id="button-expand-action" aria-label="Expand"></span><span id="button-collapse-action" aria-label="Collapse"></span><span id="button-pending-action" aria-label="Pending"></span></span><li role="treeitem" aria-expanded="true"><span data-tocid="part_advanced-d66e5732" class="topicref" data-id="part_advanced" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action part_advanced-d66e5732-link" class="wh-expand-btn"></span><span class="title"><a href="../part_advanced.html" id="part_advanced-d66e5732-link">Advanced</a></span></span><ul role="group" class="nav nav-list"><span class="expand-button-action-labels"><span id="button-expand-action" aria-label="Expand"></span><span id="button-collapse-action" aria-label="Collapse"></span><span id="button-pending-action" aria-label="Pending"></span></span><li role="treeitem" aria-expanded="false"><span data-tocid="integration-d66e6038" class="topicref" data-id="integration" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action integration-d66e6038-link" class="wh-expand-btn"></span><span class="title"><a href="../integration/integration.html" id="integration-d66e6038-link">Integration with Office</a><span class="wh-tooltip">
+                     
+                     <p xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc"></p>
+                     </span></span></span></li>
+         <li role="treeitem" aria-expanded="false"><span data-tocid="tools-d66e6449" class="topicref" data-id="tools" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tools-d66e6449-link" class="wh-expand-btn"></span><span class="title"><a href="../tools/tools.html" id="tools-d66e6449-link">Tools</a><span class="wh-tooltip">
+                     
+                     <p xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc"></p>
+                     </span></span></span></li>
+         <li role="treeitem" aria-expanded="true"><span data-tocid="macros-d66e6831" class="topicref" data-id="macros" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action macros-d66e6831-link" class="wh-expand-btn"></span><span class="title"><a href="../macros/macros.html" id="macros-d66e6831-link">Macros</a><span class="wh-tooltip">
+                     
+                     <p xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc"></p>
+                     </span></span></span><ul role="group" class="nav nav-list"><span class="expand-button-action-labels"><span id="button-expand-action" aria-label="Expand"></span><span id="button-collapse-action" aria-label="Collapse"></span><span id="button-pending-action" aria-label="Pending"></span></span><li role="treeitem"><span data-tocid="macros_about-d66e6848" class="topicref" data-id="macros_about" data-state="leaf"><span role="button" class="wh-expand-btn"></span><span class="title"><a href="../macros/macros_about.html" id="macros_about-d66e6848-link">About creating macros</a><span class="wh-tooltip">
+                           
+                           <p xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc">Why creating macros and how to do that?</p>
+                           </span></span></span></li>
+               <li role="treeitem"><span data-tocid="macros_customercode-d66e6866" class="topicref" data-id="macros_customercode" data-state="leaf"><span role="button" class="wh-expand-btn"></span><span class="title"><a href="../macros/macros_customercode.html" id="macros_customercode-d66e6866-link">Task: Customer search by code</a><span class="wh-tooltip">
+                           
+                           <p xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc">On a form is a choice list and through an assigned macro the corresponding record is         looked up.</p>
+                           </span></span></span></li>
+               <li role="treeitem" class="active"><span data-tocid="macros_customername-d66e6884" class="topicref" data-id="macros_customername" data-state="leaf"><span role="button" class="wh-expand-btn"></span><span class="title"><a href="../macros/macros_customername.html" id="macros_customername-d66e6884-link">Task: Customer search by name</a><span class="wh-tooltip">
+                           
+                           <p xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc">Searching a record with two combo boxes on a form.</p>
+                           </span></span></span></li>
+               <li role="treeitem"><span data-tocid="macros_boxcode-d66e6902" class="topicref" data-id="macros_boxcode" data-state="leaf"><span role="button" class="wh-expand-btn"></span><span class="title"><a href="../macros/macros_boxcode.html" id="macros_boxcode-d66e6902-link">Task: Choice list boxcode</a><span class="wh-tooltip">
+                           
+                           <p xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc"></p>
+                           </span></span></span></li>
+            </ul>
+         </li>
+      </ul>
+   </li>
+</ul></div>
+                        </nav>
+                    
+                    
+                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12" id="wh_topic_body">
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">Task: Customer search by name</h1>
+    
+    
+    <div class="body taskbody"><p class="shortdesc">Searching a record with two combo boxes on a form.</p>
+        <div class="section prereq p">To perform this task it is necessary that you have finished <a class="xref" href="macros_customercode.html#macros_customercode" title="On a form is a choice list and through an assigned macro the corresponding record is looked up.">Task: Customer search by code</a> where you created the form
+                <span class="keyword wintitle">Search customer by code</span> that you will need in this
+            task.</div>
+        <section class="section context">
+            <p class="p">There should be a form created with the data of a customer and with two combo boxes.
+                Through the first list a customer should be searched by the customer code and
+                through the second list by name. The second combo box should displayed a sorted list
+                of last names followed by first names. After making a choice through either list the
+                data of the customer in the form should be shown.</p>
+            <p class="p">ANALYSIS</p>
+            <p class="p">The basis of the new form is the previously created form <span class="ph uicontrol">Search customer
+                    by code</span>. In Access you can create a copy of an object and save it
+                under a different name. On this you create the second combo box. And you need to
+                create a macro that will execute the actions. First go to the drop-down list box to
+                get the entered customer code and then find the corresponding record.</p>
+        </section>
+        <ol class="ol steps"><li class="li step stepexpand">
+                <span class="ph cmd">Open database <span class="keyword">candy2016.accdb</span>.</span>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">Right click on form <span class="ph uicontrol">Search customer by code</span>, choose
+                        <span class="ph uicontrol">Copy</span>. Then right click again and choose
+                        <span class="ph uicontrol">Past</span>.</span>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">Name the new form <span class="ph uicontrol">Search customer by name</span> and open this
+                    form in <span class="ph uicontrol">Design View</span>.</span>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">Create more space for the form header. Position the mouse pointer over the top
+                    edge of Detail until it change as shown in the following illustration. Then
+                    press the left mouse button and drag the border down so that there is enough
+                    space for the second combo box.</span>
+                <div class="itemgroup stepresult">
+                    <figure class="fig fignone"><figcaption class="figcap"><span class="figtitleprefix">Figure: </span>Enlarging form header</figcaption>
+                        
+                        <img class="image" src="images/customername_formheader.png" alt="Enlarging form header" />
+                    </figure>
+                </div>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">Create a second Combo Box below the first one.</span>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">Answer the consecutive questions of the Wizard as follows:</span>
+                <div class="itemgroup info"><ul class="ul">
+                        <li class="li">The combo box should get the values from a table or a query.</li>
+                        <li class="li">Table: Customers should provide the values for the combo box.</li>
+                        <li class="li">Add in sequence the fields LastName, FirstName, CustomerCode.</li>
+                        <li class="li">Sort records ascending on LastName and then FirstName.</li>
+                        <li class="li">Accept the default width of the column and select to hide the key column
+                            (this is CustomerCode).</li>
+                        <li class="li">Remember the selected value for later use.</li>
+                        <li class="li">Label text: <kbd class="ph userinput">Search on customer name:</kbd></li>
+                    </ul></div>
+                <div class="itemgroup stepresult">
+                    <p class="p">After completing the wizard you are back in the Design View.</p></div>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">Take care that labels and combo boxes are properly aligned.</span>
+                <div class="itemgroup stepresult">
+                    <figure class="fig fignone"><figcaption class="figcap"><span class="figtitleprefix">Figure: </span>Form with 2 combo boxes</figcaption>
+                        
+                        <img class="image" src="images/customername_comboboxes.png" alt="Form with 2 combo boxes" />
+                    </figure>
+                </div>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">Select second combo box and change in the <span class="ph uicontrol">Property Sheet (tab
+                        Other)</span> the name in <kbd class="ph userinput">searchname</kbd>. Click on
+                    the selection arrow in box <span class="ph uicontrol">After Update</span> and type
+                        <kbd class="ph userinput">Search customer by name</kbd>.</span>
+                <div class="itemgroup info">
+                    <div class="note note note_note"><span class="note__title">Note:</span> This macro does not exist yet and will be created in the next
+                        step.</div>
+                </div>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">Close the form and save the changes.</span>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">Choose <span class="ph menucascade"><span class="ph uicontrol">tab Create</span><abbr title="and then"> &gt; </abbr><span class="ph uicontrol">Macro (group Macros &amp; Code)</span></span>.</span>
+                <div class="itemgroup stepresult">
+                    <figure class="fig fignone"><figcaption class="figcap"><span class="figtitleprefix">Figure: </span>Macro window</figcaption>
+                        
+                        <img class="image" src="../common/images/macro_window.png" alt="Macro window" />
+                    </figure>
+                </div>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">Click on the selection arrow in the box <span class="ph uicontrol">Add New Action</span>
+                    and select action <span class="keyword option">GoToControl</span> from the list</span>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">Enter <kbd class="ph userinput">CustomerCode</kbd> in box <span class="ph uicontrol">Control
+                        Name</span>.</span>
+                <div class="itemgroup stepresult">
+                    <figure class="fig fignone"><figcaption class="figcap"><span class="figtitleprefix">Figure: </span>Action GoToControl CustomerCode</figcaption>
+                        
+                        <img class="image" src="images/macro_customercode_gotocontrol.png" alt="Action GoToControl CustomerCode" />
+                    </figure>
+                </div>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">Click on the selection arrow in the box <span class="ph uicontrol">Add New Action</span>
+                    and select action <span class="keyword option">FindRecord</span>.</span>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">Enter value <kbd class="ph userinput">=[searchname]</kbd> in box <span class="ph uicontrol">Find
+                        What</span> in . The other arguments are already filled in by Access
+                    with their default values and can remain.</span>
+            </li></ol><p class="li stepsection">To ensure that the value of the first list box also changes to the right
+                value when choosing a name, you had to create an action for this. The value for
+                searchcode must be equal to the value of CustomerCode of the found
+                record.</p><ol class="ol steps" start="15"><li class="li step stepexpand">
+                <span class="ph cmd">Add an action with the name <span class="keyword option">Setvalue</span>. This action considers
+                    Access as a dangerous action which is not shown by default. It should be made
+                    visible in the list by using the setting <span class="ph menucascade"><span class="ph uicontrol">Show All Actions (group Show/Hide)</span></span>. This action has two parameters, <var class="keyword varname">Item</var> and
+                        <var class="keyword varname">Expression</var>, which should get the following values:</span>
+                
+                    <ul class="ul">
+                        <li class="li">Item: <kbd class="ph userinput">[Form]![Search customer by
+                                name]![searchcode]</kbd></li>
+                        <li class="li">Expression: <kbd class="ph userinput">[Form]![Search customer by
+                                name]![CustomerCode]</kbd></li>
+                    </ul>
+                
+                <div class="itemgroup stepresult">
+                    <figure class="fig fignone"><figcaption class="figcap"><span class="figtitleprefix">Figure: </span>Macro customer by name</figcaption>
+                        
+                        <img class="image" src="images/macro_customer_by_name.png" alt="Macro customer by name" />
+                    </figure>
+                </div>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">Close the macro window and save it with name <kbd class="ph userinput">Search customer by
+                        name</kbd>.</span>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">Open form <span class="ph uicontrol">Search customer by name</span> and test the operation
+                    of both combo boxes.</span>
+                <div class="itemgroup info">
+                    <div class="note attention note_attention"><span class="note__title">Attention:</span> When the first list box is used, its name does not appear
+                        in the second list box. To achieve this, you also need to add an action
+                            <span class="keyword option">SetValue</span> to this macro. But that has consequences for
+                        the operation of the combo box on form <span class="ph uicontrol">Search customer by
+                            code</span>.</div>
+                </div>
+            </li></ol>
+    </div>
+</article></main></div>
+                        
+                        <div class=" wh_related_links "><nav role="navigation" class="related-links"><div class="linklist relinfo reltasks"><strong>Related tasks</strong><br /><div class="related_link"><a class="navheader_parent_path" href="../macros/macros_customercode.html" title="On a form is a choice list and through an assigned macro the corresponding record is looked up.">Task: Customer search by code</a></div></div></nav></div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div> 
+        <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container text-center ">
+    
+            Generated by <a class="oxyFooter" href="http://www.oxygenxml.com/xml_webhelp.html" target="_blank">
+            &lt;oXygen/&gt; XML WebHelp
+            </a>
+        
+  </div>
+</footer>
+        
+        <div id="go2top">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </div>
+        
+        <!-- The modal container for images -->
+        <div id="modal_img_large" class="modal">
+            <span class="close glyphicon glyphicon-remove"></span>
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content" id="modal-img" />
+            <!-- Modal Caption (Image Text) -->
+            <div id="caption"></div>
+        </div>
+        
+        <script src="../oxygen-webhelp/lib/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-1284000-6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments)};
+        gtag('js', new Date());
+        
+        gtag('config', 'UA-1284000-6');
+    </script>
+
+    </body>
+</html>

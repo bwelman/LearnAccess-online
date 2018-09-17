@@ -1,0 +1,235 @@
+
+<!DOCTYPE html
+  PUBLIC "" "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" xml:lang="en-us" lang="en-us">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta charset="UTF-8" /><meta name="copyright" content="(C) Copyright 2018" /><meta name="DC.rights.owner" content="(C) Copyright 2018" /><meta name="DC.Type" content="concept" /><meta name="description" content="Possibilities to enforce proper and desired data entry." /><meta name="indexterms" content="data, restrictions, validation, Restrictions, data, Validation, data" /><meta name="DC.subject" content="data, restrictions, validation, Restrictions, Validation" /><meta name="keywords" content="data, restrictions, validation, Restrictions, Validation" /><meta name="DC.Relation" scheme="URI" content="../data/data.html" /><meta name="DC.Relation" scheme="URI" content="../tables/tables_fields.html" /><meta name="DC.Relation" scheme="URI" content="../tables/tables_fields_inputmasks.html" /><meta name="prodname" content="Access 2016" /><meta name="DC.Creator" content="Ben Welman" /><meta name="DC.Date.Created" content="2017-10-05" /><meta name="DC.Date.Modified" content="2017-10-05" /><meta name="DC.Format" content="XHTML" /><meta name="DC.Identifier" content="data_restriction_validation" /><meta name="DC.Language" content="en-US" />        
+      <title>Restriction and validation of data</title><!--  Generated with Oxygen version 20.1-SNAPSHOT, build number 2018080803.  --><meta name="wh-path2root" content="../" /><meta name="wh-toc-id" content="data_restriction_validation-d66e1993" /><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/lib/bootstrap/css/bootstrap.min.css" /><link rel="stylesheet" href="../oxygen-webhelp/lib/bootstrap/css/bootstrap-theme.min.css" /><link rel="stylesheet" href="../oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css" /><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/app/topic-page.css?buildId=2018080803" /><script type="text/javascript" src="../oxygen-webhelp/lib/jquery/jquery-3.1.1.min.js"><!----></script><script data-main="../oxygen-webhelp/app/topic-page.js" src="../oxygen-webhelp/lib/requirejs/require.js"></script><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/template/light.css?buildId=2018080803" /></head>
+
+    <body id="data_restriction_validation" class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">Jump to main content</a>
+        <!-- EXM-36950 - Expand the args.hdr parameter here -->
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <!--
+                            This component will be generated when the next parameters are specified in the transformation scenario:
+                            'webhelp.logo.image' and 'webhelp.logo.image.target.url'.
+                            See: http://oxygenxml.com/doc/versions/17.1/ug-editor/#topics/dita_webhelp_output.html.
+                    -->
+                    <a href="https://softwijs.nl/" class=" wh_logo hidden-xs "><img src="../LogoSW.gif" alt="  Learn Access 2016  A task oriented textbook  " /></a>
+                    <div class=" wh_publication_title "><a href="../index.html"><span class="booktitle">  <span class="ph mainbooktitle">Learn Access 2016</span>  <span class="ph booktitlealt">A task oriented textbook</span>  </span></a></div>
+                    
+                </div>
+                
+                <!-- The menu button for mobile devices is copied in the output only when the 'webhelp.show.top.menu' parameter is set to 'yes' -->
+                <button type="button" data-target="#wh_top_menu_and_indexterms_link" id="wh_menu_mobile_button" data-toggle="collapse" class="navbar-toggle collapsed wh_toggle_button" aria-expanded="false" aria-label="Toggle menu">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                <nav class=" wh_top_menu "><ul>
+   <li><span data-tocid="preface-online-d66e341" data-state="leaf" class=" topicref " data-id="preface-online"><span class="title"><a href="../common/preface-online.html">Preface</a></span></span></li>
+   <li class="has-children"><span data-tocid="part_basic-d66e357" data-state="not-ready" class=" topicref " data-id="part_basic"><span class="title"><a href="../part_basic.html">Basic</a></span></span></li>
+   <li class="has-children"><span data-tocid="part_advanced-d66e5732" data-state="not-ready" class=" topicref " data-id="part_advanced"><span class="title"><a href="../part_advanced.html">Advanced</a></span></span></li>
+   <li><span data-tocid="colofon-d66e6923" data-state="leaf" class=" topicref " data-id="colofon"><span class="title"><a href="../common/colofon.html">Colophon</a></span></span></li>
+</ul></nav>
+                <div class=" wh_indexterms_link "><a href="../indexTerms.html" title="Index" aria-label="Go to index terms page"><span>Index</span></a></div>
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        <div class=" wh_search_input "><form id="searchForm" method="get" role="search" action="../search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" /><button type="submit" class="wh_search_button" aria-label="Search"><span>Search</span></button></div><script><!--
+                                    $(document).ready(function () {
+                                        $('#searchForm').submit(function (e) {
+                                            if ($('.wh_search_textfield').val().length < 1) {
+                                                e.preventDefault();
+                                            }
+                                        });
+                                    });
+                                --></script></form></div>
+        
+        <div class="container-fluid">
+            <div class="row">
+
+                <nav class="wh_tools hidden-print">
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol xmlns:html="http://www.w3.org/1999/xhtml" class="hidden-print"><li><span class="home"><a href="../index.html"><span>Home</span></a></span></li>
+   <li><span class="topicref" data-id="part_basic"><span class="title"><a href="../part_basic.html">Basic</a></span></span></li>
+   <li><span class="topicref" data-id="data"><span class="title"><a href="../data/data.html">Data entry and modify</a><span class="wh-tooltip">
+               
+               <p xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc"></p>
+               </span></span></span></li>
+   <li class="active"><span class="topicref" data-id="data_restriction_validation"><span class="title"><a href="../data/data_restriction_validation.html">Restriction and validation of data</a><span class="wh-tooltip">
+               
+               <p xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc">Possibilities to enforce proper and desired data entry.</p>
+               </span></span></span></li>
+</ol></div>
+
+                    <div class="wh_right_tools hidden-sm hidden-xs">
+                        <div class=" wh_navigation_links "><span id="topic_navigation_links" class="navheader">
+  </span></div>
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        <div class=" wh_print_link print "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        <nav role="navigation" id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-3 hidden-xs navbar hidden-print">
+                            <div class=" wh_publication_toc " data-tooltip-position="right"><ul role="tree" aria-label="Table of Contents"><span class="expand-button-action-labels"><span id="button-expand-action" aria-label="Expand"></span><span id="button-collapse-action" aria-label="Collapse"></span><span id="button-pending-action" aria-label="Pending"></span></span><li role="treeitem" aria-expanded="true"><span data-tocid="part_basic-d66e357" class="topicref" data-id="part_basic" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action part_basic-d66e357-link" class="wh-expand-btn"></span><span class="title"><a href="../part_basic.html" id="part_basic-d66e357-link">Basic</a></span></span><ul role="group" class="nav nav-list"><span class="expand-button-action-labels"><span id="button-expand-action" aria-label="Expand"></span><span id="button-collapse-action" aria-label="Collapse"></span><span id="button-pending-action" aria-label="Pending"></span></span><li role="treeitem" aria-expanded="false"><span data-tocid="intro-d66e668" class="topicref" data-id="intro" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action intro-d66e668-link" class="wh-expand-btn"></span><span class="title"><a href="../intro/intro.html" id="intro-d66e668-link">Starting with Access</a><span class="wh-tooltip">
+                     
+                     <p xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc"></p>
+                     </span></span></span></li>
+         <li role="treeitem" aria-expanded="false"><span data-tocid="explore-d66e1317" class="topicref" data-id="explore" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action explore-d66e1317-link" class="wh-expand-btn"></span><span class="title"><a href="../explore/explore.html" id="explore-d66e1317-link">Exploring Candy database</a><span class="wh-tooltip">
+                     
+                     <p xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc"></p>
+                     </span></span></span></li>
+         <li role="treeitem" aria-expanded="true"><span data-tocid="data-d66e1886" class="topicref" data-id="data" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action data-d66e1886-link" class="wh-expand-btn"></span><span class="title"><a href="../data/data.html" id="data-d66e1886-link">Data entry and modify</a><span class="wh-tooltip">
+                     
+                     <p xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc"></p>
+                     </span></span></span><ul role="group" class="nav nav-list"><span class="expand-button-action-labels"><span id="button-expand-action" aria-label="Expand"></span><span id="button-collapse-action" aria-label="Collapse"></span><span id="button-pending-action" aria-label="Pending"></span></span><li role="treeitem"><span data-tocid="data_about-d66e1903" class="topicref" data-id="data_about" data-state="leaf"><span role="button" class="wh-expand-btn"></span><span class="title"><a href="../data/data_about.html" id="data_about-d66e1903-link">About data entry</a><span class="wh-tooltip">
+                           
+                           <p xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc">Why using a form for data entry.</p>
+                           </span></span></span></li>
+               <li role="treeitem"><span data-tocid="data_tables-d66e1921" class="topicref" data-id="data_tables" data-state="leaf"><span role="button" class="wh-expand-btn"></span><span class="title"><a href="../data/data_tables.html" id="data_tables-d66e1921-link">Table operations</a><span class="wh-tooltip">
+                           
+                           <p xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc">General instructions how to edit records in a table, adding new records and deleting         records.</p>
+                           </span></span></span></li>
+               <li role="treeitem"><span data-tocid="data_new_customer-d66e1939" class="topicref" data-id="data_new_customer" data-state="leaf"><span role="button" class="wh-expand-btn"></span><span class="title"><a href="../data/data_new_customer.html" id="data_new_customer-d66e1939-link">Task: Add new customer</a><span class="wh-tooltip">
+                           
+                           <p xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc">Adding a new record with a form that can only be used for data entry.</p>
+                           </span></span></span></li>
+               <li role="treeitem"><span data-tocid="data_new_praline-d66e1957" class="topicref" data-id="data_new_praline" data-state="leaf"><span role="button" class="wh-expand-btn"></span><span class="title"><a href="../data/data_new_praline.html" id="data_new_praline-d66e1957-link">Task: Add new praline</a><span class="wh-tooltip">
+                           
+                           <p xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc">Adding a new record with a form which can be used for browsing and adding         data.</p>
+                           </span></span></span></li>
+               <li role="treeitem"><span data-tocid="data_new_box-d66e1975" class="topicref" data-id="data_new_box" data-state="leaf"><span role="button" class="wh-expand-btn"></span><span class="title"><a href="../data/data_new_box.html" id="data_new_box-d66e1975-link">Task: Add new box</a><span class="wh-tooltip">
+                           
+                           <p xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc">Adding a new record with a main form and a subform.</p>
+                           </span></span></span></li>
+               <li role="treeitem" class="active"><span data-tocid="data_restriction_validation-d66e1993" class="topicref" data-id="data_restriction_validation" data-state="leaf"><span role="button" class="wh-expand-btn"></span><span class="title"><a href="../data/data_restriction_validation.html" id="data_restriction_validation-d66e1993-link">Restriction and validation of data</a><span class="wh-tooltip">
+                           
+                           <p xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc">Possibilities to enforce proper and desired data entry.</p>
+                           </span></span></span></li>
+               <li role="treeitem" aria-expanded="false"><span data-tocid="tocId-d66e2011" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d66e2011-link" class="wh-expand-btn"></span><span class="title"><a href="../data/exercises/ex_data001.html" id="tocId-d66e2011-link">Exercises</a></span></span></li>
+            </ul>
+         </li>
+         <li role="treeitem" aria-expanded="false"><span data-tocid="tables-d66e2389" class="topicref" data-id="tables" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tables-d66e2389-link" class="wh-expand-btn"></span><span class="title"><a href="../tables/tables.html" id="tables-d66e2389-link">Tables</a><span class="wh-tooltip">
+                     
+                     <p xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc"></p>
+                     </span></span></span></li>
+         <li role="treeitem" aria-expanded="false"><span data-tocid="queries-d66e3442" class="topicref" data-id="queries" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action queries-d66e3442-link" class="wh-expand-btn"></span><span class="title"><a href="../queries/queries.html" id="queries-d66e3442-link">Queries</a><span class="wh-tooltip">
+                     
+                     <p xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc"></p>
+                     </span></span></span></li>
+         <li role="treeitem" aria-expanded="false"><span data-tocid="forms-d66e4795" class="topicref" data-id="forms" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action forms-d66e4795-link" class="wh-expand-btn"></span><span class="title"><a href="../forms/forms.html" id="forms-d66e4795-link">Forms</a><span class="wh-tooltip">
+                     
+                     <p xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc"></p>
+                     </span></span></span></li>
+         <li role="treeitem" aria-expanded="false"><span data-tocid="reports-d66e5464" class="topicref" data-id="reports" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action reports-d66e5464-link" class="wh-expand-btn"></span><span class="title"><a href="../reports/reports.html" id="reports-d66e5464-link">Reports</a><span class="wh-tooltip">
+                     
+                     <p xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc"></p>
+                     </span></span></span></li>
+      </ul>
+   </li>
+</ul></div>
+                        </nav>
+                    
+                    
+                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12" id="wh_topic_body">
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">Restriction and validation of data</h1>
+    
+    
+    <div class="body conbody"><p class="shortdesc">Possibilities to enforce proper and desired data entry.</p>
+        <p class="p">You have various options in Access to control the way data is entered into the database.
+            For example, you can limit the data that can be entered in a field by defining a
+            validation rule for that field. If the entered data doesn't satisfy the rule, an error
+            message informs you what kind of input is permitted. Another method for controlling data
+            input is using an input mask, which is a format for data entry in a field by using
+            characters and symbols.</p>
+        <p class="p">You can apply these simple methods of validation and restriction by setting properties
+            for fields in tables or properties for controls on forms.</p>
+        <p class="p">It is recommended to define validation and restriction of data in the design of the table
+            by setting field properties. This saves time, because every time you use the field in a
+            form, the rules for field validation and other properties are also used on the form.</p>
+        <p class="p">If the data entered through a control on a form is not dependent of a table field, then
+            you need to define properties on the form for validating and restriction of data.</p>
+        <div class="example"><h2 class="title sectiontitle">Example</h2>
+            
+            <p class="p">A memo from the marketing department of Snoopy reports that the price of the box
+                Butterscotch should be changed in $7.75.</p>
+            <ol class="ol">
+                <li class="li">Open form <var class="keyword varname">Boxes</var> and navigate to box
+                        <var class="keyword varname">Butterscotch</var>.</li>
+                <li class="li">Change BoxPrice from $27.75 to $7.75 and press the TAB key. A validation message
+                    appears stating that this price is not right and how you can fix it.<div class="simpletable-container"><table class="simpletable frame-all"><colgroup><col style="width:100%" /></colgroup><tbody><tr class="strow">
+                            <td class="stentry">Box price too low, should be minimal 2*BoxCosts. Contact
+                                marketing department for further information.</td>
+                        </tr></tbody></table></div>Because a validation rule is linked to the field BoxPrice, the
+                    price of 7.50 was rejected.</li>
+                <li class="li">Click <span class="ph uicontrol">OK</span>.</li>
+                <li class="li">Change the price back in $27.75 and press the TAB key. After that close the
+                    form.</li>
+            </ol>
+        </div>
+    </div>
+</article></main></div>
+                        
+                        <div class=" wh_related_links "><nav role="navigation" class="related-links"><div class="linklist relinfo relconcepts"><strong>Related concepts</strong><br /><div class="related_link"><a class="navheader_parent_path" href="../tables/tables_fields.html" title="Information about name and data type of a field.">Fields in tables</a></div><div class="related_link"><a class="navheader_parent_path" href="../tables/tables_fields_inputmasks.html" title="On how to enforce a desired data input via input masks.">Input masks</a></div></div></nav></div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div> 
+        <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container text-center ">
+    
+            Generated by <a class="oxyFooter" href="http://www.oxygenxml.com/xml_webhelp.html" target="_blank">
+            &lt;oXygen/&gt; XML WebHelp
+            </a>
+        
+  </div>
+</footer>
+        
+        <div id="go2top">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </div>
+        
+        <!-- The modal container for images -->
+        <div id="modal_img_large" class="modal">
+            <span class="close glyphicon glyphicon-remove"></span>
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content" id="modal-img" />
+            <!-- Modal Caption (Image Text) -->
+            <div id="caption"></div>
+        </div>
+        
+        <script src="../oxygen-webhelp/lib/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-1284000-6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments)};
+        gtag('js', new Date());
+        
+        gtag('config', 'UA-1284000-6');
+    </script>
+
+    </body>
+</html>
